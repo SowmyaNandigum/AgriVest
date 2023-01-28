@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title>AgriVest</title>
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <link rel="stylesheet" href="trystyle.css">
+    </head>
+    <body>
+
+        <div class="intro">
+            <h1 class="logo-header">
+              <span class="logo">Agri</span><span class="logo">vest.</span>
+            </h1>
+           </div>
+
+        <div class="banner" id="start">
+            <div class="navbar"  id="secnav">
+                <a href="#" class="logo2">AgriVest</a>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                  
+                    
+                    <li><div class="icons">
+                        <div class="lock">
+                          <h1 class="status"></h1>
+                        <button class="find-state"><i class='bx bxs-location-plus'></i></button>
+                      </div>
+                       </div>
+                        
+                      
+                  </li>
+                </ul>
+            </div>
+
+            <div class="content">
+                <h1 class="mainn" data-aos="fade-right" data-aos-duration="100" data-aos-easing="linear">Join Invest Grow</h1>
+                <p>The connection between farmers and people. 
+                  Invest with us to get fixed returns. <br>Join us to improve your farming experience .<div>
+            <a href="farmer.html"><button type="button" class="button1"><span class="span1"></span>Login as Farmer</button></a>
+          <a href="investor.html">  <button type="button" class="button1"><span class="span1"></span> Login as Invester</button></a>
+           </div>
+           <div class="bubble">
+            <img  class="raining" src="raindrop.png">
+            <img  class="raining" src="raindrop.png">
+            <img  class="raining" src="raindrop.png">
+            <img  class="raining" src="raindrop.png">
+            <img  class="raining" src="raindrop.png">
+            <img  class="raining" src="raindrop.png">
+           </div>
+                </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        
+  <script>
+    AOS.init();
+  </script>
+        <script src="location.js"></script>
+
+      
+        <script>
+            var menu_btn = document.querySelector("#menu_btn")
+            var secnav = document.querySelector("#secnav")
+            var container = document.querySelector(".start")
+            menu_btn.addEventListener("click",()=>{
+                secnav.classList.toggle("active-nav")
+                container.classList.toggle("active-cont")
+            })
+            </script>
+            <script src="app.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>cat</title>
+    <link rel="stylesheet" href="tryfarmer.css">
+    
+    
+  </head>
+  <body>
+    
+    <div class="banner" id="start">
+        <div class="navbar"  id="secnav">
+          <a href="index.html" class="logo2">AgriVest</a>
+            <ul>
+              <li><a href="Invpage.html">Home</a></li>
+              <li><a href="profile.html">Investments</a></li>
+              <li><a href="http://localhost:3000/profile">Profile</a></li>
+                    
+                  
+              </li>
+            </ul>
+        </div>
+        <p class="txt22" id="line">---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+             
+      <section class="container justify-content-center">
+        
+        <div class="card-body" data-aos="zoom-out" data-aos-duration="300" data-aos-easing="linear">
+        <div class="row">
+            <div class="col-md-4">
+                <img id="pic" src="Rajanna.jpeg">
+            </div>
+            <div class="col-md-8">
+                <div class="mb-3">
+                    <p class="txt" id="name">Name : Rajanna</p>
+                </div>
+                <div class="mb-3">
+                    <p class="txt" id="place">Place : Nizamabad</p>
+                </div>
+                <div class="mb-3">
+                    <p class="txt" id="mobile">Mobile Number : 90848283848</p>
+                </div>
+                <div class="mb-3">
+                    <p class="txt" id="Type">Type of crop : Maize</p>
+                </div>
+            </div>
+        </div>
+        <div class="space">
+
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <img id="pic" src="Corn.jpg">
+            </div>
+            <div class="col-md-8">
+                
+                <div class="mb-3">
+                    <p class="txt" id="soil">Type of soil : Old Alluvial Soil</p>
+                </div>
+                <div class="mb-3">
+                    <p class="txt" id="farming">Modern Farming</p>
+                </div>
+                <div class="mb-3">
+                    <p class="txt" id="source">Irrigation Source : Drip</p>
+                </div>
+                <div class="mb-3">
+                    <p class="txt" id="area"> Area : 20 Acres</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+             
+</section>
+<p class="txt22" id="line2">---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+                   
+<div class="forms">
+    <a href=" http://127.0.0.1:5000" ><button class="yield btn-lg">Yield Prediction</button></a> <a href="investform.html"><button class="invest btn-lg">Invest</button></a><br><br>
+</div><div class="forms"> <input type="email" id="reference" placeholder="Email of your paypal Account" class="btn-lg" required>
+    <button id="done" class="done btn-lg">Done</button></div>
+              
+
+
+    
+
+  <script src="searching.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyCQk-GLwDUL0VWoTHME685_8Q6VArBMRM4",
+      authDomain: "farmerp-5dbc0.firebaseapp.com",
+      projectId: "farmerp-5dbc0",
+      storageBucket: "farmerp-5dbc0.appspot.com",
+      messagingSenderId: "663046901869",
+      appId: "1:663046901869:web:631a6dfcfc1a7562806f64"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+  
+  
+    import {getDatabase,set, get, update, remove,ref,child} from "https://www.gstatic.com/firebasejs/9.16.0/firebase-database.js"
+  const db = getDatabase();
+var name = document.querySelector("#name");
+var place = document.querySelector("#place");
+var Type = document.querySelector("#Type");
+var area = document.querySelector("#area");
+var mobile = document.querySelector("#mobile");
+var soil = document.querySelector("#soil");
+var farming = document.querySelector("#farming");
+var source = document.querySelector("#source");
+
+var line = document.querySelector("#line");
+var line2=document.querySelector("#line2");
+
+
+
+
+var insertBtn = document.querySelector("#done");
+
+function insert(){
+set( ref(db, "profile/" + name.innerHTML),  {
+      name : name.innerHTML,
+  place : place.innerHTML,
+      Type : Type.innerHTML,
+      area : area.innerHTML,
+      mobile : mobile.innerHTML,
+      soil : soil.innerHTML,
+      farming : farming.innerHTML,
+      source : source.innerHTML,
+      
+      line : line.innerHTML,
+      line2:line2.innerHTML,
+      
+      
+      
+      
+})
+
+.then(()=>{
+  alert("Successful")
+})
+.catch((error)=>{
+  alert(error)
+});
+}
+
+function removeData(){
+  remove(ref(db,"profile/"))
+  .then(()=>{
+    alert("data removed successfully");
+  })
+  .catch((error)=>{
+  alert("unsuccessful,error"+error);
+  });
+}
+
+
+insertBtn.addEventListener('click', insert);
+
+
+
+</script>
+
+
+
+
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,198 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+  .banner{
+    width:100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(farm2.webp);
+    background-size: cover;
+    background-position: center;
+  }
+  a{
+    text-decoration: none;
+  }
+  .logo2{
+  color: white;
+  font-size: 40px;
+  width: 120px;
+  cursor: pointer;
+  }
+  .navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+  }
+  .navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+  }
+  .navbar ul li a{
+    text-decoration: none;
+    color: white;
+    text-transform: capitalize;
+  }
+  .navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+  }
+  .navbar ul li:hover::after{
+    width: 100%;
+  }
+  .content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+  }
+  .content h1{
+    font-size: 70px;
+    margin-top: 80px;
+    text-transform: uppercase;
+  }
+  .content p{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+  }
+  .button1{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  .span1{
+    background: #009688;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+  }
+  .button1:hover .span1{
+    width: 100%;
+  
+  }
+  .button1:hover{
+    border: none;
+  }
+  .intro{
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 110%;
+    height: 100vh;
+    background-image: url("farm6.jpg");
+    background-position: center;
+    transition: 1s;
+  
+  }
+  .logo-header{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+  }
+  
+  .logo{
+    position: relative;
+    display: inline-block;
+    bottom: -20px;
+    opacity: 0;
+  }
+  .logo.active{
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+  }
+  
+  .logo.fade{
+    bottom: 150px;
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+  }
+  
+  
+  .active-nav{
+    margin-left: 0;
+  }
+  .avtive-cont{
+    margin-left: 250px;
+  }
+  
+  .bubble img{
+    width: 10px;
+    animation: rain 2s linear infinite;
+  }
+  .bubble{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    top: 0;
+  }
+  @keyframes rain{
+    0%{
+      transform: translateY(0);
+      opacity: 0;
+    }
+    50%{
+      
+      opacity: 1;
+    }
+    70%{
+      
+      opacity: 1;
+    }
+    100%{
+      transform: translateY(80vh);
+      opacity: 0;
+    }
+  }
+  .bubble img:nth-child(1){
+    animation-delay: 2s;
+  }
+  .bubble img:nth-child(2){
+    animation-delay: 1s;
+  }
+  .bubble img:nth-child(3){
+    animation-delay: 3s;
+  }
+  .bubble img:nth-child(4){
+    animation-delay: 1.5s;
+  }
+  .bubble img:nth-child(5){
+    animation-delay: 6s;
+  }
+  .bubble img:nth-child(6){
+    animation-delay: 4.5s;
+  }

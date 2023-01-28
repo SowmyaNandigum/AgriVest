@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>cat</title>
+    <link rel="stylesheet" href="investor.css">
+  </head>
+  <body>
+    <div class="banner" >
+        <div class="navbar"  id="secnav">
+          <a href="index.html" class="logo2">AgriVest</a>
+          <ul>
+            <li>Logged in as: Investor</li>
+              
+<li><a href="index.html">Home</a></li>              
+          </ul>
+      </div>
+
+      <main class="container">
+       Obtain fixed returns on your investments while helping farmers!
+          Invest into any farm of your choosing after viewing their details. Your total investment will directly go towards helping the farmers. After the yield is obtained, you can get fixed returns on your investment along with the satisfaction of helping relieve the financial stress of the farmer. Invest in multiple farmers at once and track all your investments seamlessly at one place. Anyone including farmers working with us can invest to obtain fixed returns. 
+          Invest now to secure your fixed returns like a vest. <br><br><p class="text-center">Scroll down to fill the form!<i class='bx bx-down-arrow-alt'></i></p>
+          <div class="text-center">
+            <input type="number" placeholder="Investment Amount" id="inside" class="inn text-center btn-lg">
+            <p><button class="answer btn-lg" onclick="result()">Get Amount</button></p>
+            <p id="result">The return Amount for 12 months is</p></div>
+  
+        </div></main>
+
+
+    <section class="fill">
+<form action="" class="contact-form" id="contact-form">
+    <input type="text" placeholder="Your Name" class="name btn-lg" id="name" data-aos="fade-left" data-aos-duration="500" data-aos-easing="linear" required>
+                 <input type="text" name="" id="gender" placeholder="Gender" class="gender btn-lg"  data-aos="fade-right" data-aos-duration="500" data-aos-easing="linear"  required>
+                 <input type="number" placeholder="Age" class="age btn-lg" id="age" data-aos="fade-left" data-aos-duration="500" data-aos-easing="linear" required>
+                 <input type="number"  id="proof" placeholder="ID Proof No." class="proof btn-lg"    required>
+                 <input type="number"  id="phone" placeholder="Phone No" class="phone btn-lg"    required>
+                 <input type="text"  id="dob" placeholder="Date of Birth" class="dob btn-lg"    required>
+                 <input type="text"  id="job" placeholder="Occupation" class="job btn-lg"    required>
+                 <input type="text"  id="address" placeholder="Address" class="address btn-lg"    required>
+                 <input type="email"  id="email" placeholder="Email" class="Email btn-lg"    required>
+                 <label class="coo">Investment Criteria</label>
+                 <input type="text"  id="ideal" placeholder="Describe your ideal investment Property" class="ideal btn-lg"    required>
+                 <input type="text"  id="area" placeholder="Areas that you are looking to invest in" class="area btn-lg"    required>
+                 <input type="number"  id="price" placeholder="Approximate Price Range" class="price btn-lg"    required>
+                 <input type="text"  id="prop" placeholder="Type of property you are interested in.." class="prop btn-lg"    required>
+                
+               
+                 <input type="submit" value="Save" class="send-btn btn-lg" id="send">
+               
+                </form>
+               
+            </section>
+            <a href="Invpage.html"><button class="arr btn-lg">Visit page</button></a>
+
+
+</div>
+<script src="main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+AOS.init();
+</script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+         <script type="text/javascript">
+             (function(){
+                 emailjs.init("eOzQryYxFD91mS4Ae");
+             })();
+         </script>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyAZkKoT6YBpJaCPQC5oykxhof21gKALNXc",
+    authDomain: "investorform-59648.firebaseapp.com",
+    projectId: "investorform-59648",
+    storageBucket: "investorform-59648.appspot.com",
+    messagingSenderId: "766308041036",
+    appId: "1:766308041036:web:a8a8fd79c34bae288c4fe9"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  import{getDatabase,ref,set,child,update,remove}
+  from  "https://www.gstatic.com/firebasejs/9.16.0/firebase-database.js";
+
+  const db = getDatabase();
+
+  var name = document.getElementById("name");
+  var gender = document.getElementById("gender");
+  var age = document.getElementById("age");
+  var proof = document.getElementById("proof");
+  var phone = document.getElementById("phone");
+  var dob = document.getElementById("dob");
+  var job = document.getElementById("job");
+  var address = document.getElementById("address");
+  var ideal = document.getElementById("ideal");
+  var area = document.getElementById("area");
+  var price = document.getElementById("price");
+  var prop = document.getElementById("prop");
+  var email = document.getElementById("email")
+
+  
+  
+  var send = document.getElementById("send");
+
+  function InsertData(){
+    set(ref(db,"Farmer"+name.value),{
+      Name:name.value,
+      Gender:gender.value,
+      Age:age.value,
+      IDProof:proof.value,
+      PhoneNo:phone.value,
+      DateOfBirth:dob.value,
+      Occupation:job.value,
+      Address:address.value,
+      IdealInvestmentProperty:ideal.value,
+      Areas:area.value,
+      PriceRange:price.value,
+      TypeOfProperty:prop.value,
+      Email:email.value,
+      
+
+    })
+    .then(()=>{
+      alert("data stored successfully");
+    })
+    .catch((error)=>{
+      alert("unsuccessful,error"+error);
+    });
+  }
+
+  send.addEventListener('click',InsertData);
+  
+  
+ 
+
+</script>
+<script src="tryreact.js"></script>
+<script src="function.js"></script>
+</body>
+</html>

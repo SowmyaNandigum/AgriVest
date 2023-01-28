@@ -1,0 +1,208 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+  .banner{
+    width:100%;
+    height: 170vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(farm2.webp);
+    background-size: cover;
+    background-position: center;
+  }
+  a{
+    text-decoration: none;
+  }
+  .logo2{
+    color: white !important;
+    font-size: 40px;
+    width: 120px;
+    cursor: pointer;
+    text-decoration: none;
+    
+    }
+  .navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+  }
+  .navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+  }
+  .navbar ul li a{
+    text-decoration: none;
+    color: white;
+    text-transform: capitalize;
+  }
+  .navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+  }
+  .navbar ul li:hover::after{
+    width: 100%;
+  }
+
+
+
+.txt{
+    color: white;
+    padding: 10px 0;
+    
+}
+.card-body{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.invest{
+    border-radius: 0.3rem;
+}
+.space{
+    margin-top: 30px;
+}
+.info{
+    background-image: linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url(farm2.webp);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    border-radius: 0.4rem;
+}
+.forms{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.txt22{
+    display: none;
+    position: absolute;
+    left: 2%;
+
+}
+
+p{
+    color: white;
+    font-size: 18px;
+}
+.bx{
+    font-size: 20px;
+    padding-right: 5px;
+}
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-form{
+    max-width: 600px;
+    margin: auto;
+    width: 100%;
+    display: grid;
+    row-gap: 1rem;
+    color: white;
+}
+.contact-form input,.contact-form textarea{
+    border: none;
+    outline: none;
+    font-size: 0.97rem;
+    padding: 15px;
+    color: white;
+    background-image: linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url(farm2.webp);
+    border-radius: 0.4rem;
+}
+.contact-form .send-btn{
+    width: 120px;
+    font-size: 0.97rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 200px;
+    margin-bottom: 30px;
+}
+.contact-form .send-btn:hover{
+    background: transparent;
+    transition: 0.3s all linear;
+}
+.contact{
+    max-width: 960px;
+        margin: auto;
+        width: 100%;
+        background-image: linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url(farm2.webp);
+        border-radius: 0.5rem;
+        margin-top: 30px;
+        margin-bottom: 30px;
+}
+.about-content{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 0rem;
+    justify-content: center;
+}
+.about-data span{
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--main-color);
+}
+ h2{
+    font-size: 2rem;
+    line-height: 2.6rem;
+    font-weight: 700;
+    margin-bottom: 60px;
+    color: white;
+    
+}
+.about-data p{
+    margin-left: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn{
+    font-size: 0.97rem;
+    display: inline-flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    color: var(--bg-color);
+    background-color: #252b5f;
+    padding: 12px 16px;
+    border-radius: 0.4rem;
+    margin-top: 1rem;
+    margin-left: 100px;
+}
+.btn .bx{
+    font-size: 1.2rem;
+}
+.btn:hover{
+    background: var(--main-color);
+    transition: 0.3s all linear;
+}
+.about-text p{
+    font-size: 0.94rem;
+    letter-spacing: 1px;
+    text-align: justify;
+    margin-bottom: 1.5rem;
+}
+.about-text button{
+    margin-left: 200px;
+}

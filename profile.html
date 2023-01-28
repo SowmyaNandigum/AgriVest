@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>cat</title>
+    <link rel="stylesheet" href="profile.css">
+    
+    
+  </head>
+  <body>
+    
+    <div class="banner" id="start">
+        <div class="navbar"  id="secnav">
+          <a href="index.html" class="logo2">AgriVest</a>
+            <ul>
+                
+              <li><a href="Invpage.html">Home</a></li>
+              <li><a href="profile.html">Investments</a></li>
+              <li><a href="http://localhost:3000/profile">Profile</a></li>
+                  
+              </li>
+            </ul>
+        </div>
+        
+        <div id="group" class="got" >
+          <div><p class="txt" id="findline2"></p></div>
+            <div> <p class="txt" id="findname" type="text"></p></div>
+            <div> <p class="txt8" id="findplace" ></p></div>
+            <div> <p class="txt" id="findtype" type="text"></p></div>
+            <div> <p class="txt" id="findarea" type="text"></p></div>
+            <div> <p class="txt" id="findmobile" type="text"></p></div>
+            <div> <p class="txt" id="findsoil" type="text"></p></div>
+            <div> <p class="txt" id="findfarming" type="text"></p></div>
+            <div><p class="txt" id="findsource" type="text"></p></div>
+            
+         <div><p class="txt" id="findbreaks"></p></div>
+         <div><p class="txt" id="findline"></p></div>
+         
+             
+         
+             
+           </div>
+       
+
+    </div>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyCQk-GLwDUL0VWoTHME685_8Q6VArBMRM4",
+        authDomain: "farmerp-5dbc0.firebaseapp.com",
+        projectId: "farmerp-5dbc0",
+        storageBucket: "farmerp-5dbc0.appspot.com",
+        messagingSenderId: "663046901869",
+        appId: "1:663046901869:web:631a6dfcfc1a7562806f64"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+    
+    
+      import {getDatabase,set, get, update, remove,ref,child} from "https://www.gstatic.com/firebasejs/9.16.0/firebase-database.js"
+        const db = getDatabase();
+        var line2 = document.querySelector("#line2");
+      var name = document.querySelector("#name");
+      var place = document.querySelector("#place");
+      var Type = document.querySelector("#Type");
+      var area = document.querySelector("#area");
+      var mobile = document.querySelector("#mobile");
+      var soil = document.querySelector("#soil");
+      var farming = document.querySelector("#farming");
+      var source = document.querySelector("#source");
+      
+      var line = document.querySelector("#line");
+
+
+
+      
+      var insertBtn = document.querySelector("#done");
+      
+      function insert(){
+      set( ref(db, "profile/" + name.innerHTML),  {
+        lin2 : line2.innerHTML   , 
+        name : name.innerHTML,
+        place : place.innerHTML,
+            Type : Type.innerHTML,
+            area : area.innerHTML,
+            mobile : mobile.innerHTML,
+            soil : soil.innerHTML,
+            farming : farming.innerHTML,
+            source : source.innerHTML,
+           
+            line : line.innerHTML,
+            
+            
+            
+      })
+      
+      .then(()=>{
+        alert("Successful")
+      })
+      .catch((error)=>{
+        alert(error)
+      });
+      }
+      
+      function removeData(){
+        remove(ref(db,"profile/"))
+        .then(()=>{
+          alert("data removed successfully");
+        })
+        .catch((error)=>{
+        alert("unsuccessful,error"+error);
+        });
+      }
+      
+      
+    
+
+
+      var div = document.getElementById('group');
+function FindData(finname,finplace,finType,finarea,finmobile,finsoil,finfarming,finsource,finline,finline2){
+  
+  
+let findline2 = document.createElement('p');
+  let findname= document.createElement('p');
+  let findplace= document.createElement('p');
+  let findType= document.createElement('p');
+  let findarea= document.createElement('p');
+  let findmobile= document.createElement('p');
+  let findsoil= document.createElement('p');
+  let findfarming= document.createElement('p');
+  let findsource= document.createElement('p');
+ 
+  let findline = document.createElement('p');
+
+findline2.innerHTML=finline2;
+  findname.innerHTML=finname;
+  findplace.innerHTML=finplace;
+  findType.innerHTML=finType;
+  findarea.innerHTML=finarea;
+  findmobile.innerHTML=finmobile;
+  findsoil.innerHTML=finsoil;
+  findfarming.innerHTML=finfarming;
+  findsource.innerHTML=finsource;
+  
+  findline.innerHTML=finline;
+  div.appendChild(findline2);
+  div.appendChild(findname);
+  div.appendChild(findplace);
+  div.appendChild(findType);
+  div.appendChild(findarea);
+  div.appendChild(findmobile);
+  div.appendChild(findsoil);
+  div.appendChild(findfarming);
+  div.appendChild(findsource);
+  
+  div.appendChild(findline);
+
+
+}
+
+function FetchAllData(profile){
+  div.innerHTML="";
+  profile.forEach(element =>{
+    FindData(element.name,element.place,element.Type,element.area,element.mobile,element.soil,element.farming,element.source,element.line,element.line2);
+
+  });
+}
+
+function getAllDataOnce(){
+  const dbRef = ref(db);
+  get(child(dbRef,"profile"))
+  .then((snapshot)=>{
+    var profiles =[];
+    snapshot.forEach(childSnapshot =>{
+profiles.push(childSnapshot.val());
+    });
+
+    FetchAllData(profiles);
+  });
+}
+window.onload = getAllDataOnce;
+      </script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script type="text/javascript">
+        (function(){
+            emailjs.init("eOzQryYxFD91mS4Ae");
+        })();
+    </script>
+    
+  </body>
+</html>

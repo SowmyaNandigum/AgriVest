@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;1,200&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+}
+    :root{
+        --main-color:#64e0ff;
+        --body-color:#f5f1ee;
+        --container-color:#252b5f;
+        --heading-color:#222231;
+        --box-color:#010425;
+        --bg-color:#fff;
+
+
+    }
+    body{
+        color: var(--bg-color);
+        background: var(--body-color);
+
+    }
+    img{
+        width: 100%;
+    }
+    section{
+        padding: 3rem 0 2rem;
+
+    }
+    a{
+        text-decoration: none;
+    }
+    li{
+        list-style: none;
+    }
+    .container{
+      padding-top: 50px;
+        max-width: 600px;
+        margin: auto;
+        width: 100%;
+        font-size: 18px;
+        backdrop-filter: blur(8px);
+        height: 60vh;
+        
+                
+    }
+    .container .bx{
+      font-size: 20px;
+      color: white;
+    }
+    h3{
+      color: #009688;
+    }
+    header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+    }
+    .header-active{
+        background: var(--box-color);
+        transition: 0.4s;
+    }
+    *{
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+    .banner{
+      width:100%;
+      height: 100vh;
+      background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(farm2.webp);
+      background-size: cover;
+      background-position: center;
+    }
+    a{
+      text-decoration: none;
+    }
+    .logo2{
+    color: white !important;
+    font-size: 40px;
+    width: 120px;
+    cursor: pointer;
+    text-decoration: none;
+    
+    }
+    .navbar{
+      width: 85%;
+      margin: auto;
+      padding: 35px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    
+    }
+    .navbar ul li{
+      list-style: none;
+      display: inline-block;
+      margin: 0 20px;
+      position: relative;
+    }
+    .navbar ul li a{
+      text-decoration: none;
+      color: white;
+      text-transform: capitalize;
+    }
+    .navbar ul li::after{
+      content: '';
+      height: 3px;
+      width: 0;
+      background: #009688;
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      transition: 0.5s;
+    }
+    .navbar ul li:hover::after{
+      width: 100%;
+    }
+    
+    
+    .fill{
+        color: var(--bg-color);
+        background: var(--body-color);
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+   
+    .top .bx{
+      font-size: 30px;
+      color: white;
+    }
+    .hr{
+     
+      color: white;
+    }
+    .form-label{
+      color: white;
+    }
+    
+    .form-control{
+      width: 50%;
+      
+    }
+    .mb-3{
+      padding: 10px 20px;
+      margin-left: 5%;
+    }
+    .form-check{
+      padding-left: 30px;
+    }
+    .form-check-label{
+      color: white;
+      padding-left: 5px;
+    }
+    .form-check-input{
+      margin-left: 10px;
+    }
+    .tog{
+      padding-left: 20px;
+      display: inline-flex;
+      margin-left: 5%;
+    }
+    .txt{
+      color: white;
+    }
+    .button{
+      padding: 10px 20px;
+      text-decoration: none;
+      color: black;
+      border-radius: 3rem;
+      
+    }
+    .but{
+      border-radius: 0.9rem;
+      margin-left: 22%;
+      
+    }
+    
+    .butts{
+      padding-top: 20px;
+      padding-bottom: 20px;
+      width: 100%;
+     
+    }
+    .footer{
+        background: #088F8F;
+    }
+    ul{
+        list-style: none;
+      }
+      .row2{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .footer-col{
+        width: 30%;
+        padding: 15px 20px;
+      }
+      .footer-col a{
+        color: white;
+        text-decoration: none;
+      }
+      
+      .social{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 0.5rem;
+        margin-top: 20px;
+        padding-left: 10px;
+      }.social .bx{
+        font-size: 1.3rem;
+        padding: 10px;
+        margin-right: 10px;
+        border-radius: 50%;
+        color: blue;
+        background:white;
+      }
+      .social .bx:hover{
+        background: #088F8F;
+        transition: 0.3s all linear;
+      
+      }
+      .connect{
+        color: white;
+        font-size: 20px;
+      }
+      .foo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .about{
+        padding: 6px 0;
+      }
+      .pri{
+        padding: 6px 0;
+      }
+      .home{
+        padding-top: 10px;
+      }
+      .space{
+        padding-top: 18px;
+      }
+      
+    
+      .contact-form{
+        max-width: 800px;
+        margin: auto;
+        width: 100%;
+        display: grid;
+        row-gap: 2rem;
+        margin: 5px;
+       
+      }
+    a{
+      text-decoration: none;
+      color: white;
+    }
+    
+    
+.will{
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.banner{
+  width:100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(farm2.webp);
+  background-size: cover;
+  background-position: center;
+}
+.coo{
+  color: black;
+}
+.service{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.service .bx{
+  margin-right: 6px;
+  margin-top: 4px;
+}
+.service button{
+  margin-left: 20px;
+}
